@@ -165,7 +165,7 @@ footer li { margin-bottom: 0.5rem; }
 .award-no .award-line:last-child { background: linear-gradient(90deg, #3a3a3a, transparent); }
 .award-no .foil {
   font-family: var(--font-huge);
-  font-size: clamp(6rem, 17vw, 12rem);
+  font-size: clamp(3.6rem, 11vw, 8rem);
   line-height: .92;
   display: inline-block;
   background: linear-gradient(100deg, #8a6a33 0%, var(--gold) 24%, #f6e7b8 50%, var(--gold) 76%, #8a6a33 100%);
