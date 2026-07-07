@@ -127,8 +127,8 @@
     function cellNode(item, mode) {
       var d = document.createElement("div");
       d.style.cssText = mode === "carousel"
-        ? "flex:0 0 auto;width:300px;height:400px;overflow:hidden;position:relative;cursor:zoom-in;background:#141414;"
-        : "width:100%;height:300px;overflow:hidden;position:relative;cursor:zoom-in;background:#141414;";
+        ? "flex:0 0 auto;width:300px;height:400px;overflow:hidden;position:relative;cursor:zoom-in;background:#141414;content-visibility:auto;contain-intrinsic-size:300px 400px;"
+        : "width:100%;height:300px;overflow:hidden;position:relative;cursor:zoom-in;background:#141414;content-visibility:auto;contain-intrinsic-size:280px 300px;";
       if (item.v) {
         d.setAttribute("data-hw-view", BASE + item.v);
         d.innerHTML = (item.t ? "<img src='" + BASE + item.t + "' alt='Video from The Hair Witch portfolio' loading='lazy' style='width:100%;height:100%;object-fit:cover;display:block;'>" : "") +
