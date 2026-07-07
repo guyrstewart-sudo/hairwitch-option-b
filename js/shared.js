@@ -64,7 +64,15 @@
         if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
       });
     }, { threshold: 0.1 });
+    window.__hwRevealReady = true;
     revealed.forEach(function (el) { io.observe(el); });
+    /* failsafe: never leave content invisible if the observer misbehaves */
+    setTimeout(function () {
+      document.querySelectorAll(".reveal:not(.visible)").forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight) el.classList.add("visible");
+      });
+    }, 2500);
   } else {
     revealed.forEach(function (el) { el.classList.add("visible"); });
   }
