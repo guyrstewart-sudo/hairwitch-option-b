@@ -63,7 +63,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.01, rootMargin: "0px 0px 35% 0px" });
     window.__hwRevealReady = true;
     revealed.forEach(function (el) { io.observe(el); });
     /* failsafe: never leave content invisible if the observer misbehaves */
@@ -127,8 +127,8 @@
     function cellNode(item, mode) {
       var d = document.createElement("div");
       d.style.cssText = mode === "carousel"
-        ? "flex:0 0 auto;width:300px;height:400px;overflow:hidden;position:relative;cursor:zoom-in;"
-        : "width:100%;height:300px;overflow:hidden;position:relative;cursor:zoom-in;";
+        ? "flex:0 0 auto;width:300px;height:400px;overflow:hidden;position:relative;cursor:zoom-in;background:#141414;"
+        : "width:100%;height:300px;overflow:hidden;position:relative;cursor:zoom-in;background:#141414;";
       if (item.v) {
         d.setAttribute("data-hw-view", BASE + item.v);
         d.innerHTML = (item.t ? "<img src='" + BASE + item.t + "' alt='Video from The Hair Witch portfolio' loading='lazy' style='width:100%;height:100%;object-fit:cover;display:block;'>" : "") +

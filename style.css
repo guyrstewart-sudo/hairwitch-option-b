@@ -154,7 +154,7 @@ footer li { margin-bottom: 0.5rem; }
 .shop .medium { color: var(--grey); font-size: 0.85rem; margin: 0.2rem 0 1rem; }
 .shop .btn { margin-top: 0; padding: 0.6rem 1.4rem 0.45rem; font-size: 0.85rem; margin-right: 0.5rem; }
 
-html.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s ease; }
+html.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
 
