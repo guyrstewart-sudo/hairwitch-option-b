@@ -157,3 +157,26 @@ footer li { margin-bottom: 0.5rem; }
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+
+/* ---- Award masthead: gold-foil Nº 2 ---- */
+.award-band { text-align: center; }
+.award-no { display: flex; align-items: center; justify-content: center; gap: 2.2rem; margin: 1.6rem 0 1rem; }
+.award-no .award-line { flex: 1; max-width: 220px; height: 1px; background: linear-gradient(90deg, transparent, #3a3a3a); }
+.award-no .award-line:last-child { background: linear-gradient(90deg, #3a3a3a, transparent); }
+.award-no .foil {
+  font-family: var(--font-huge);
+  font-size: clamp(6rem, 17vw, 12rem);
+  line-height: .92;
+  display: inline-block;
+  background: linear-gradient(100deg, #8a6a33 0%, var(--gold) 24%, #f6e7b8 50%, var(--gold) 76%, #8a6a33 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  animation: hwFoil 6s linear infinite;
+}
+@keyframes hwFoil { to { background-position: 200% center; } }
+.award-title { font-family: var(--font-huge); text-transform: uppercase; letter-spacing: .32em; font-size: clamp(1rem, 2.6vw, 1.5rem); color: var(--white); margin: .4rem 0 1.3rem; }
+.award-meta { display: flex; gap: 1.3rem; justify-content: center; align-items: baseline; color: var(--grey); font-family: var(--font-huge); letter-spacing: .24em; font-size: .92rem; flex-wrap: wrap; }
+.award-meta .stars { color: var(--gold); letter-spacing: .38em; }
+@media (prefers-reduced-motion: reduce) { .award-no .foil { animation: none; } }
+@media (max-width: 560px) { .award-no { gap: 1.1rem; } }
